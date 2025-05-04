@@ -1,4 +1,4 @@
-import { FourChanClient } from "./client";
+import { FourChanClient } from "./index";
 
 async function main () {
 
