@@ -27,7 +27,7 @@ npm install 4chan-ts
 
 ### Quick Start
 
-```
+```ts
 import { FourChanClient } from "4chan-ts";
 
 
