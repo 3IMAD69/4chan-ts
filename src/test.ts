@@ -1,19 +1,14 @@
 import { FourChanClient } from "./index";
 
-async function main () {
 
+(async ()=>{
   const chan = new FourChanClient();
 
-  const {data , error } = await chan.getBoards();
+  const {data , error } = await chan.getThread("g", 123456789);
   if (error)
   {
     console.error(error);
     return ;
   }
-  data.boards.forEach((board) => {
-    console.log(`Board: ${board.board} - Title: ${board.title}`);
-  });
-
-}
-
-main()
+  console.log(data);
+})

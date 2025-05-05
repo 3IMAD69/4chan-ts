@@ -1,15 +1,45 @@
 # 4chan-ts
 
-To install dependencies:
+A modern and typed 4chan API wrapper written in TypeScript.
+
+This package provides simple access to [4chan's public JSON API](https://github.com/4chan/4chan-API), supporting boards, threads, and posts with full type safety.
+
+## ✨ Features
+
+- 🌀 Supports all public endpoints of the 4chan API
+- ⚡ Built in TypeScript for type safety and modern dev experience
+- 🧪 Lightweight
+- 🚀 Bun-first, Node/npm-compatible
+
+---
+
+## 📦 Installation
+
+### Using [Bun](https://bun.sh)
 
 ```bash
-bun install
+bun add 4chan-ts
 ```
-
-To run:
-
+### Using [NPM]
 ```bash
-bun run index.ts
+npm install 4chan-ts
 ```
 
-This project was created using `bun init` in bun v1.2.11. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### Quick Start
+
+```
+import { FourChanClient } from "4chan-ts";
+
+
+(async ()=>{
+  const chan = new FourChanClient();
+
+  const {data , error} = await chan.getBoards();
+  if (error)
+  {
+    console.error(error);
+    return ;
+  }
+  console.log(data); // const data: BoardList
+})()
+```
