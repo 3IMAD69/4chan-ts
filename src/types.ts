@@ -82,12 +82,8 @@ export interface Thread {
 }
 
 
-interface Post {
-  posts: Thread[];
-}
-
 export interface ThreadIndex {
-  threads: Post[];
+  posts: Thread[];
 }
 
 
